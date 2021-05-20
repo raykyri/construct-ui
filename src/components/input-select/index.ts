@@ -111,7 +111,7 @@ export class InputSelect<T> extends AbstractComponent<IInputSelectAttrs<T>>  {
       onkeydown: this.handleInputKeyDown,
       value: this.isOpen ? this.query : value,
       onfocus: this.handleInputFocus,
-      placeholder: this.isOpen ? value : ''
+      placeholder: inputAttrs.placeholder ? inputAttrs.placeholder : (this.isOpen ? value : '')
     }) as m.VnodeDOM;
 
     const content = [
